@@ -1,0 +1,19 @@
+$(function(){
+	//header
+	$(".logins").hover(function(){
+		$(this).css("color","red");
+	},function(){
+		$(this).css("color","#666");
+	})
+	$(".register").hover(function(){
+		$(this).css("color","red");
+	},function(){
+		$(this).css("color","#666");
+	})
+	$("#top ul").find("li:not(:last) a").hover(function(){
+		$(this).css("color","red");
+	},function(){
+		$(this).css("color","#666");
+	})
+	//header
+})
