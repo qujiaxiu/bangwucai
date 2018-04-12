@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>帮5采-登录</title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/foot.css"/>
+	</head>
+	<body>
+		<div id="head">
+			<div class="ucenter-top">
+				<div class="top-left">
+					<div class="ucenter-logo">
+						<a href="../html/index.html">
+							<img src="http://st.b5cai.com/home/img/b5c_logo.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="top-right">
+					<span class="b5c-true">
+						<img src="../image/tubiao1.jpg" alt="" class="b5c-true-ico b5c-true-certified"/>
+						<h3 style="margin-right: 46px;">正品保证</h3>
+					</span>
+					<span class="b5c-true">
+						<img src="../image/tubiao2.jpg" alt="" class="b5c-true-ico b5c-true-certified"/>
+						<h3>快捷可靠</h3>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="center">
+				<div class="centerl">
+					<a href="javascript:;">
+						<img src="http://st.b5cai.com/ucenter/img/ucenter_img.png" alt="" class="ban"/>
+					</a>
+				</div>
+				<div class="centerr">
+					<div class="one">欢迎登录</div>
+					<div class="tel">
+						<input type="text" placeholder="手机号" id="tel"/>
+					</div>
+					<div class="code">
+						<input type="password" placeholder="密码" id="code"/>
+					</div>
+					<div id="enter">
+						<a href="javascript:;">登录</a>
+					</div>
+					<div class="bottom">
+						<span class="remember">
+							<a href="javascript:;">忘记密码</a>
+						</span>
+						<span class="account">
+							<a href="../html/register.html" target="_blank">免费注册</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-wrap"></div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/login.js"></script>
+<script>
+	$("#footer-wrap").load("foot.html #foot",function(){
+		//footer_nav
+		for( let i = 0 ; i < $(".footer_nav a").size() ; i++ ){
+			$(".footer_nav a").eq(i).hover(function(){
+				$(this).css({"color":"#f61d4b","text-decoration":"underline"})
+			},function(){
+				$(this).css({"color":"#333","text-decoration":"none"})
+			})
+		}
+		//footer_nav
+		//footer_copy
+		for( let i = 0 ; i < $(".footer_copy a").size() ; i++ ){
+//			console.log(i);
+			$(".footer_copy a").eq(i).hover(function(){
+				$(this).css("color","white")
+			},function(){
+				$(this).css("color","#999")
+			})
+		}
+		//footer_copy
+	});
+</script>

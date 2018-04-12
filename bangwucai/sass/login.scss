@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend,figure,img { margin:0; padding:0; }
+body{
+    overflow-x: hidden;
+}
+a,u{text-decoration:none;}
+b,strong{font-weight:100;}
+i,em{font-style:normal;}
+ul,li,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-style:16px;font-weight:100;}
+img{display:block;border:0;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+
+
+#head,#content{
+    width: 100%;
+}
+#head{
+    height: 110px;
+    border-bottom: 1px solid #eaeaea;
+    .ucenter-top{
+        width: 1080px;
+        height: 109px;
+        margin: 0 auto;
+        .top-left{
+            float: left;
+            min-height: 50px;
+            .ucenter-logo{
+                margin: 0;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 25px;
+            }
+        }
+        .top-right{
+            float: right;
+            padding-top: 40px;
+            min-width: 300px;
+            .b5c-true{
+                img{
+                    top: -3px;
+                    position: relative;
+                    width: 37px;
+                    height: 37px;
+                    margin-right: 18px;
+                    float: left;
+                }
+                h3{
+                    font-size: 18px;
+                    float: left;
+                    color: #333;
+                    font-weight: 500;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
+
+#content{
+    min-height: 460px;
+    .center{
+        width: 1080px;
+        min-height: 460px;
+        background: white;
+        margin: 0 auto;
+        padding: 70px 0 0;
+        .centerl{
+            float: left;
+            width: 550px;
+            height: 370px;
+            .ban{
+                width: 550px;
+                height: 290px;
+            }
+        }
+        .centerr{
+            width: 410px;
+            min-height: 345px;
+            padding: 15px 0 0;
+            font-size: 14px;
+            color: #333333;
+            position: relative;
+            margin: 0 auto;
+            background: white;
+            float: right;
+            .one{
+                width: 324px;
+                height: 40px;
+                line-height: 40px;
+                float: right;
+            }
+            .tel,.code{
+                width: 322px;
+                height: 38px;
+                background: white;
+                border: 1px #ccc solid;
+                border-radius: 5px;
+                float: right;
+                #tel,#code{
+                    border: none;
+                    outline: none;
+                    line-height: 38px;
+                    margin-left: 6px;
+                    width: 260px;
+                }
+            }
+            .code{
+                margin: 40px 0 40px;
+            }
+            #enter{
+                float: right;
+                margin-bottom: 40px;
+                a{
+                    display: block;
+                    width: 324px;
+                    height: 36px;
+                    background: #EA094B;
+                    color: white;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 36px;
+                }
+            }
+            .bottom{
+                width: 324px;
+                height: 19px;
+                float: right;
+                .remember{
+                    float: left;
+                    a{
+                        color: #333;
+                    }
+                }
+                .account{
+                    float: right;
+                    a{
+                        color: #EA094B;
+                    }
+                }
+            }
+        }
+    }
+}

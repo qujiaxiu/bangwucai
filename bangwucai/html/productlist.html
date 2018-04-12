@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>彩妆_护肤_美容彩妆 批发采购一件代发货源网-帮5采</title>
+		<link rel="stylesheet" type="text/css" href="../css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/productlist.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/foot.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
+	</head>
+	<body>
+		<div id="header-wrap"></div>
+		<div id="content">
+			<div class="main">
+				<div class="main-title">
+					<span class="menu-title">
+						<a href="javascript:;">帮5采</a>
+					</span>
+					<span class="menu-title menu-color">
+						>&nbsp;
+						<a href="javascript:;">美容彩妆</a>
+					</span>
+					<span class="menu-title active">
+						>&nbsp;
+						<a href="javascript:;" class="on delete">
+							护肤
+							<i class="iconfont iconfont-close"></i>
+						</a>
+					</span>
+					<p class="menu-title">
+						共<span class="menu-title-totalCount">243</span>件商品
+					</p>
+				</div>
+				<div class="nav">
+					<div class="nav-one">
+						<span>分类:</span>
+						<ul>
+							<li><a href="javascript:;">面膜(25)</a></li>
+							<li><a href="javascript:;">洁面(20)</a></li>
+							<li><a href="javascript:;">爽肤水(12)</a></li>
+							<li><a href="javascript:;">护肤套装(11)</a></li>
+							<li><a href="javascript:;">精华(10)</a></li>
+							<li><a href="javascript:;">防晒霜(8)</a></li>
+							<li><a href="javascript:;">乳液/凝胶(6)</a></li>
+							<li><a href="javascript:;">面霜(5)</a></li>
+							<li><a href="javascript:;">眼部护理(2)</a></li>
+							<li><a href="javascript:;">卸妆(1)</a></li>
+						</ul>
+					</div>
+					<div class="nav-two">
+						<span>品牌:</span>
+						<ul>
+							<li><a href="javascript:;">悦诗风吟</a></li>
+							<li><a href="javascript:;">雪花秀</a></li>
+							<li><a href="javascript:;">兰芝</a></li>
+							<li><a href="javascript:;">Whoo/后</a></li>
+							<li><a href="javascript:;">拳头商品</a></li>
+							<li><a href="javascript:;">高丽雅娜</a></li>
+							<li><a href="javascript:;">自然乐园</a></li>
+							<li><a href="javascript:;">谜尚</a></li>
+							<li><a href="javascript:;">欧惠</a></li>
+							<li><a href="javascript:;">IOPE/亦博</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="hot-goods">
+					<ul class="goods"></ul>
+				</div>
+				<div id="paging">
+					<div class="txt">
+						共<span class="num"></span>条记录
+					</div>
+					<span id="left">
+						<a href="javascript:;">上一页</a>
+					</span>
+					<ul id="u" class="oUl"></ul>
+					<span id="right">
+						<a href="javascript:;">下一页</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="footer-wrap"></div>
+		<div class="right_banner_fixed_wrap">
+			<div class="right_banner_fixed">
+				<ul>
+					<li class="nav01">
+						<a href="javascript:;">采</a>
+						<span>值得信赖的帮5采<div class="triangle"></div></span>
+					</li>
+					<li class="nav02">
+						<a href="javascript:;"><i class="iconfont iconfont-tel2"></i></a>
+						<span>点击留言<div class="triangle"></div></span>
+					</li>
+					<li class="nav03">
+						<a href="javascript:;"><i class="iconfont iconfont-wuliu"></i></a>
+						<span>物流配送<div class="triangle"></div></span>
+					</li>
+					<li class="nav04">
+						<a href="javascript:;"><i class="iconfont iconfont-2code"></i></a>
+						<b>
+							<img src="../image/right.bmp" alt="" />
+							<div class="triangle"></div>
+						</b>
+					</li>
+					<li class="nav05">
+						<a href="javascript:;"><i class="iconfont iconfont-cart2-selected"></i></a>
+						<span>购物车<div class="triangle"></div></span>
+					</li>
+					<li class="nav06">
+						<a href="javascript:;"><i class="iconfont iconfont-gotop"></i></a>
+						<span>返回顶部<div class="triangle"></div></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/productlist.js"></script>
+<script>
+	$("#header-wrap").load("head.html #head",function(){
+		//nav-product
+		//product
+		for( var i = 1 ; i < 5 ; i++ ){
+			$(".navs li").eq(i).hover(function(){
+				$(".product").show();
+			},function(){
+				$(".product").hide();
+			})
+		}
+		$(".product").hover(function(){
+			$(this).show();
+		},function(){
+			$(this).hide();
+		})
+		
+		//product-right
+		var navone = "";
+		$.ajax("../json/nav.json")
+		.then(function(res){
+			for( var i = 0 ; i < 15 ; i++ ){
+				navone += `
+					<li>
+						<a href="javascript:;">
+							<img src="${res[i].img}" alt="" />
+							<span>${res[i].name}</span>
+						</a>
+					</li>
+				`;
+			}
+			$(".list").html(navone);
+		})
+	$(".list").on({
+			"mouseenter" : function(){
+				$(this).find("img").css("display","none")
+				$(this).find("span").css("display","block").hover(function(){
+					$(this).css("display","block").prev().css("display","none")
+				})
+			},
+			"mouseleave" : function(e){
+				$(this).find("img").css("display","block")
+				$(this).find("span").css("display","none")
+			}
+		},"li")
+		//product-right
+		
+		//nav-product
+		
+		//login
+		for( let i = 0 ; i < $(".login a").size() ; i++ ){
+			$(".login a").eq(i).hover(function(){
+				$(this).css("color","#f61d4b")
+			},function(){
+				$(this).css("color","#666")
+			})
+		}
+		//login
+		
+		//top
+		for( let i = 0 ; i < 3 ; i++ ){
+			$(".top ul li a").eq(i).hover(function(){
+				$(this).css("color","#f61d4b")
+			},function(){
+				$(this).css("color","#666")
+			})
+		}
+		//top
+	});
+	
+	$("#footer-wrap").load("foot.html #foot",function(){
+		//footer_nav
+		for( let i = 0 ; i < $(".footer_nav a").size() ; i++ ){
+			$(".footer_nav a").eq(i).hover(function(){
+				$(this).css({"color":"#f61d4b","text-decoration":"underline"})
+			},function(){
+				$(this).css({"color":"#333","text-decoration":"none"})
+			})
+		}
+		//footer_nav
+		//footer_copy
+		for( let i = 0 ; i < $(".footer_copy a").size() ; i++ ){
+//			console.log(i);
+			$(".footer_copy a").eq(i).hover(function(){
+				$(this).css("color","white")
+			},function(){
+				$(this).css("color","#999")
+			})
+		}
+		//footer_copy
+	})
+</script>

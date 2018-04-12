@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>帮5采-注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css" />
+		<link rel="stylesheet" type="text/css" href="../css/foot.css"/>
+	</head>
+	<body>
+		<div id="head">
+			<div class="ucenter-top">
+				<div class="top-left">
+					<div class="ucenter-logo">
+						<a href="../html/index.html">
+							<img src="http://st.b5cai.com/home/img/b5c_logo.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="top-right">
+					<span class="b5c-true">
+						<img src="../image/tubiao1.jpg" alt="" class="b5c-true-ico b5c-true-certified"/>
+						<h3 style="margin-right: 46px;">正品保证</h3>
+					</span>
+					<span class="b5c-true">
+						<img src="../image/tubiao2.jpg" alt="" class="b5c-true-ico b5c-true-certified"/>
+						<h3>快捷可靠</h3>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div id="main">
+			<div id="reg">
+				<div class="wire">
+					<div class="one"></div>
+					<div class="two"></div>
+				</div>
+				<div class="order">
+					<dl class="one">
+						<dt>1</dt>
+						<dd>手机验证</dd>
+					</dl>
+					<dl class="two">
+						<dt>2</dt>
+						<dd>填写资料</dd>
+					</dl>
+					<dl class="three">
+						<dt>3</dt>
+						<dd>平台审核</dd>
+					</dl>
+				</div>
+			</div>
+			<div id="data">
+				<div class="content">
+					<ul>
+						<li class="a">
+							<p><span>*</span>&nbsp;手机号：</p>
+							<div class="name">
+								<input type="text" name="name" id="oname" value="" placeholder="请输入手机号"/>
+							</div>
+						</li>
+						<div id="prompt">请重新输入</div>
+						<li class="b">
+							<p><span>*</span>&nbsp;登录密码：</p>
+							<div class="name">
+								<input type="password" name="opwd" id="opwd" value="" placeholder="请输入密码"/>
+							</div>
+						</li>
+						<div id="prompt1">请重新输入</div>
+						<li class="c">
+							<p><span>*</span>&nbsp;确认密码：</p>
+							<div class="name">
+								<input type="password" name="opwds" id="opwds" value="" placeholder="请再次输入密码"/>
+							</div>
+						</li>
+						<div id="prompt2">请重新输入</div>
+						<li class="d">
+							<p><span>*</span>&nbsp;手机验证码：</p>
+							<div class="name">
+								<input type="text" name="ophone" id="ophone" value="" placeholder="请输入手机验证码"/>
+							</div>
+						</li>
+						<div id="prompt3">验证码错误</div>
+					</ul>
+				</div>
+				<div id="Verification">
+					<a href="javascript:;" class="Verification">获取验证码</a>
+				</div>
+				<div class="Agreement">
+					<i class="iconfont iconfont-xuanzhong1"></i>
+					<h2>
+						注册即阅读并接受
+						<a href="javascript:;">《帮5采服务协议》</a>
+						<a href="javascript:;">《法律声明及隐私权政策》</a>
+					</h2>
+				</div>
+				<div id="ok">
+					<a href="javascript:;" class="ok">完成</a>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div id="footer-wrap"></div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/register.js"></script>
+<script>
+	$("#footer-wrap").load("foot.html #foot",function(){
+		//footer_nav
+		for( let i = 0 ; i < $(".footer_nav a").size() ; i++ ){
+			$(".footer_nav a").eq(i).hover(function(){
+				$(this).css({"color":"#f61d4b","text-decoration":"underline"})
+			},function(){
+				$(this).css({"color":"#333","text-decoration":"none"})
+			})
+		}
+		//footer_nav
+		//footer_copy
+		for( let i = 0 ; i < $(".footer_copy a").size() ; i++ ){
+//			console.log(i);
+			$(".footer_copy a").eq(i).hover(function(){
+				$(this).css("color","white")
+			},function(){
+				$(this).css("color","#999")
+			})
+		}
+		//footer_copy
+	});
+</script>

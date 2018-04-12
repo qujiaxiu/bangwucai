@@ -140,6 +140,7 @@ img {
   float: left;
   margin: 39px 0 0 193px;
   border: #f61d4b solid 1px;
+  position: relative;
 }
 .center #searchs i {
   margin: 12px 5px 0 5px;
@@ -163,6 +164,20 @@ img {
   color: white;
   line-height: 38px;
   text-align: center;
+}
+.center #searchs .jsonps {
+  width: 309px;
+  background: white;
+  position: absolute;
+  top: 39px;
+  z-index: 999;
+}
+.center #searchs .jsonps li {
+  line-height: 26px;
+  padding-left: 10px;
+}
+.center #searchs .jsonps li a {
+  color: black;
 }
 .center .cart, .center .want {
   width: 134px;
@@ -210,11 +225,16 @@ img {
   z-index: 10;
   line-height: 45px;
 }
-#nav .nav {
+#nav .navs {
   width: 1180px;
+  height: 48px;
   margin: 0 auto;
 }
-#nav .nav li a {
+#nav .navs li {
+  height: 48px;
+  float: left;
+}
+#nav .navs li a {
   display: block;
   float: left;
   height: 45px;
@@ -222,17 +242,60 @@ img {
   font-size: 16px;
   color: #333;
 }
-#nav .nav li :hover {
+#nav .navs li :hover {
   color: #f61d4b;
   border-bottom: 4px solid #f61d4b;
+}
+
+.topnavinner-bg {
+  position: fixed;
+  left: 0;
+  z-index: 666;
+  width: 100%;
+  top: 0;
+  display: none;
+  background: white;
+}
+.topnavinner-bg .topnav2 {
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+.topnavinner-bg .topnav2 .topinnnerpic {
+  float: left;
+  height: 36px;
+  margin: 6px 30px 0 0;
+}
+.topnavinner-bg .topnav2 .menu-lists2 {
+  position: relative;
+  z-index: 12;
+}
+.topnavinner-bg .topnav2 .menu-lists2 .menu-item2 {
+  float: left;
+  position: relative;
+}
+.topnavinner-bg .topnav2 .menu-lists2 .menu-item2 .nav-tit {
+  float: left;
+  height: 44px;
+  padding: 0 19px;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 4px solid transparent;
+}
+.topnavinner-bg .topnav2 .menu-lists2 .menu-item2 .active {
+  color: #f61d4b;
+  border-bottom-color: #f61d4b;
 }
 
 .product {
   width: 1180px;
   min-height: 100px;
   position: absolute;
-  margin: 196px 0 0 84px;
+  margin: 0 0 0 84px;
   box-shadow: 0 1px 10px #ccc;
+  display: none;
   z-index: 300;
   background: white;
 }
@@ -287,7 +350,7 @@ img {
   width: 560px;
 }
 .product .right .list li {
-  width: 111px;
+  width: 108px;
   height: 112px;
   border: 1px solid #d5d5d5;
   float: left;
@@ -295,20 +358,27 @@ img {
   text-align: center;
   font-size: 12px;
   margin-right: -1px;
+  position: relative;
 }
-.product .right .list li img {
+.product .right .list li a {
+  color: #333;
+  font-size: 14px;
+}
+.product .right .list li a img {
   width: 110px;
   height: 50px;
   margin-top: 30px;
 }
-.product .right .list li span {
+.product .right .list li a span {
+  position: absolute;
   width: 100%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.6);
-  top: 50%;
+  top: 30%;
   color: #fff;
   display: block;
   text-align: center;
+  line-height: 50px;
   display: none;
 }
 
